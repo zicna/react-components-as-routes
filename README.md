@@ -31,9 +31,9 @@ depending on which URL is displayed. As React Router's documentation states:
 
 > Components are the heart of React's powerful, declarative programming model.
 > React Router is a collection of navigational components that compose
-> declaratively with your application. Whether you want to have bookmarkable URLs
-> for your web app or a composable way to navigate in React Native, React Router
-> works wherever React is rendering--so take your pick!
+> declaratively with your application. Whether you want to have bookmark-able
+> URLs for your web app or a composable way to navigate in React Native, React
+> Router works wherever React is rendering--so take your pick!
 
 For this README we will be building our first Component routes as a code along.
 
@@ -68,14 +68,18 @@ With React Router our core routing will live in this component. We will define
 our various routes within this file. To start using routes, we need to install
 `react-router-dom`:
 
-```sh
-npm install react-router-dom
+```console
+$ npm install react-router-dom@5
 ```
 
-To start implementing routes, we first need to import `BrowserRouter` and `Route` from
-`react-router-dom`. `BrowserRouter` is commonly renamed as `Router`, so we'll follow this
-convention, as well. We can create an _alias_ with the syntax `BrowserRouter as Router`.
-So every time we refer to `Router` in this file, we are really just refering to `BrowserRouter`.
+> **Note**: make sure to include `@5` at the end of the install command to
+> install React Router version 5 instead of version 6.
+
+To start implementing routes, we first need to import `BrowserRouter` and
+`Route` from `react-router-dom`. `BrowserRouter` is commonly renamed as
+`Router`, so we'll follow this convention, as well. We can create an _alias_
+with the syntax `BrowserRouter as Router`. So every time we refer to `Router` in
+this file, we are really just referring to `BrowserRouter`.
 
 ```jsx
 // .src/index.js
@@ -182,7 +186,9 @@ ReactDOM.render(
 
 Reload your browser and look at our beautiful routes...oops! Error:
 
-<span style='color:red'>A &lt;Router&gt; may have only one child element</span>
+```txt
+A `<Router>` may have only one child element
+```
 
 If you open up your browser dev tools console you should be seeing the same
 error. What does this mean? Well, as you know in React, a component must return
@@ -361,9 +367,10 @@ ReactDOM.render(
 );
 ```
 
-Load up the browser again and you should see beautiful blue navlinks that load
-up the desired component. For more practice, implement `/signup` and `/messages`
-routes/navlinks that load in components.
+Load up the browser again and you should see beautiful blue `<NavLink>`
+components that load up the desired component. For more practice, implement
+`/signup` and `/messages` using `<Route>`s and `<NavLink>`s that load in
+components.
 
 ## Refactoring
 
@@ -507,7 +514,7 @@ ReactDOM.render(
 
 ## Resources
 
-- [React Router Tutorial](https://reacttraining.com/react-router/web/example/basic)
+- [React Router Tutorial](https://v5.reactrouter.com/web/example/basic)
 
-[route_docs]: https://reacttraining.com/react-router/web/api/Route
+[route_docs]: https://v5.reactrouter.com/web/api/Route
 [soils]: https://en.wikipedia.org/wiki/Soil_type
